@@ -1,0 +1,43 @@
+{
+    "parameterSets": {
+        "Standardwerte des Designs": {
+            "$fn": "50",
+            "ABS_NOTCH_X": "51",
+            "BRAND": "extrudr",
+            "BRAND_SIZE": "4.2",
+            "CARD_CORNER_RADIUS": "3.3",
+            "CARD_EDGE_RADIUS": "1.1",
+            "CARD_HEIGHT": "35",
+            "CARD_LENGTH": "80",
+            "CARD_THICKNESS": "2.2",
+            "COLOR": "Metallic Grey",
+            "COLOR_SIZE": "5.5",
+            "FONT": "Liberation Sans:style=Bold",
+            "INFILL_NOTCH_X": "25.5",
+            "INFILL_SAMPLE": "0",
+            "INSET_CORNER_RADIUS": "2.2",
+            "INSET_DEPTHS": "[1, 0.8, 0.6, 0.4, 0.2]",
+            "INSET_EDGE_RADIUS": "1",
+            "INSET_FROM_BOTTOM": "2.5",
+            "INSET_HEIGHT": "10",
+            "INSET_WIDTH": "7",
+            "INVERT_CARD": "1",
+            "NOTCH_RADIUS": "0",
+            "OTHER_NOTCH_X": "68",
+            "PETG_NOTCH_X": "34",
+            "PLA_NOTCH_X": "17",
+            "SHOW_FIRSTLAYER_TEMP": "0",
+            "TEMP_BED": "60",
+            "TEMP_BED_FIRST_LAYER": "85",
+            "TEMP_HOTEND": "225",
+            "TEMP_HOTEND_FIRST_LAYER": "240",
+            "TEMP_SIZE": "4.2",
+            "TEXT_DEPTH": "1.5",
+            "TEXT_X": "4",
+            "TEXT_Y": "39",
+            "TYPE": "Biofusion",
+            "TYPE_SIZE": "4.2"
+        }
+    },
+    "fileFormatVersion": "1"
+}
