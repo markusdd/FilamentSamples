@@ -153,7 +153,7 @@ module Invert() {
     translate([INSET_FROM_BOTTOM, INSET_FROM_BOTTOM, TEXT_DEPTH])
         cube([37.5,CARD_HEIGHT - (2 * INSET_FROM_BOTTOM),4]);
     translate([37.5, 15, TEXT_DEPTH])
-        cube([40.5,17.5,4]);
+        cube([40,17.5,4]);
 }
 
 module Infill() {
