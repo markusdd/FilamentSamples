@@ -2,6 +2,10 @@
 
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R8DQO8C)
 
+ Samples               | Samples Box (by Zahg)
+:---------------------:|:-------------------------:
+ ![](docs/samples.png) | ![](docs/samples_box.png)
+
 We've all come across like 100 different 3D print filament samples, but most require you to either request new ones from the author, or you need the special commercial CAD tool to go into the parameters and change the text yourself.
 
 This generator is based on OpenSCAD, a completely free 'programmable' CAD tool.
