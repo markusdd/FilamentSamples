@@ -12,6 +12,7 @@ So how is this any good? Easy: The packaged `gen_samples.py` script just reads a
 ## How To
 
 - make sure you have OpenSCAD and Python available on your machine (see below for OS-specific prerequisite install instructions)
+- make sure you have the 'Liberation Sans' Font available, it comes with LibreOffice or you can get it from here: <https://www.1001freefonts.com/de/liberation-sans.font>
 - edit `samples.csv` and put in the filaments you like to generate samples for
 - if you are not on Windows or your OpenSCAD install is not in the `C:\Program Files` standard path, edit `gen_samples.py` and at the top put in the path to the executable for the variable `OPENSCAD`, or just uncomment the `openscad` entry if it is accessible anywhere on your machine because it is part of your PATH variable 
 - run `gen_samples.py`, if your Python install is in your PATH or `.py` files are linked you should even be able to just double-click it, if not get a command line shell and run `python gen_samples.py` (on Linux you might have to use python3 instead)
