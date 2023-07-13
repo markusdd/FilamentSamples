@@ -67,6 +67,8 @@ For OpenSCAD I recommend checking if your standard package manager has it availa
 
 If you are running homebrew you should be able to get both Python 3 and OpenSCAD via `brew`, otherwise go to the webpages of OpenSCAD and Python and get the newest Mac distribution from there.
 
+The standard path to the OpenSCAD binary on MacOS is `/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD`.
+
 ## Ackknowledgements
 I derived this OpenSCAD model from blazerat over at printables: <https://www.printables.com/de/model/356074-filament-sample-card/files>
 
