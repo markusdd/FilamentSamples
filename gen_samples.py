@@ -3,9 +3,14 @@
 import subprocess
 import csv
 import os
+import platform
 
-OPENSCAD = "C:\Program Files\OpenSCAD\openscad.exe"
-# OPENSCAD = "openscad"
+if platform.system() == 'Windows':
+    OPENSCAD = 'C:\Program Files\OpenSCAD\openscad.exe'
+elif platform.system() == 'Linux':
+     OPENSCAD = 'openscad'
+else:
+    OPENSCAD = '/Applications/OpenSCAD.app/Contents/MacOS/OpenSCAD'
 
 MYDIR=os.path.dirname(os.path.realpath(__file__))
 
