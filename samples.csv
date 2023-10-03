@@ -1,9 +1,12 @@
-extrudr,Biofusion,Metallic Grey,225,60
-extrudr,PETG,Black,230,80
-JAYO,PLA+,Black,205,60
-JAYO,PLA+ Silk,Red Copper,210,60
-JAYO,PLA+ Silk,Light Gold,210,60
-JAYO,PETG,Black,230,80
-JAYO,PETG,Orange,230,80
-ERYONE,PLA Matte,Navy Blue,215,60
-OVERTURE,PETG,Rock White,235,80
+﻿Brand,Type,Type2,Color,Color2,Bed Temp,Hotend Temp
+extrudr,Biofusion,,Metallic Grey,,225,60
+extrudr,PETG,,Black,,230,80
+JAYO,PLA+,,Black,,205,60
+JAYO,PLA+ Silk,,Red Copper,,210,60
+JAYO,PLA+ Silk,,Light Gold,,210,60
+JAYO,PETG,,Black,,230,80
+JAYO,PETG,,Orange,,230,80
+ERYONE,PLA Matte,,Navy Blue,,215,60
+OVERTURE,PETG,,Rock White,,235,80
+polymaker,PolyLite,PETG,Electric Blue,#0076CF,80,240
+Overture,PETG,,Red,,,
