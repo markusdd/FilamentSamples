@@ -1,9 +1,11 @@
 // Change For Each Card
 BRAND="extrudr";
 COLOR="Metallic Grey";
+COLOR2="";
 TYPE="Biofusion";
-TEMP_HOTEND="225";
-TEMP_BED="60";
+TYPE2="";
+TEMP_HOTEND="";
+TEMP_BED="";
 
 // Change only if absolutely necessary
 COLOR_SIZE=5.5;
@@ -70,8 +72,10 @@ FONT = "Liberation Sans:style=Bold";
 TEXT_X=4.0;
 TEXT_Y=39.0;
 TEXT_DEPTH=1.5;
-//TEXT_TEMP=str(TEMP_HOTEND, "\u00B0\u2013", TEMP_BED, "\u00B0");
-TEXT_TEMP=str("N", TEMP_HOTEND, "\u00B0 B", TEMP_BED, "\u00B0");
+
+TEXT_HOTEND_TEMP = str("N", TEMP_HOTEND, "\u00B0");
+TEXT_BED_TEMP = str("B", TEMP_BED, "\u00B0");
+TEXT_TEMP = (TEMP_HOTEND && TEMP_BED) ? str("N", TEMP_HOTEND, "\u00B0 B", TEMP_BED, "\u00B0") : (TEMP_HOTEND ? TEXT_HOTEND_TEMP : (TEMP_BED ? TEXT_BED_TEMP : ""));
 TEXT_FL_TEMP=str("   ", TEMP_HOTEND_FIRST_LAYER, "\u00B0\u2013", TEMP_BED_FIRST_LAYER, "\u00B0");
 
 $fn = 50;
@@ -129,13 +133,66 @@ module TopInset(Inset_X, Thickness) {
 }
 
 module CardInfo() {
-  Text(16.5, TEXT_TEMP, TEMP_SIZE, 1.1, "right", CARD_LENGTH-TEXT_X+0.2);
-  Text(24, COLOR, COLOR_SIZE, 1.0);
-  Text(10, BRAND, BRAND_SIZE, 1.0);
-  if (SHOW_FIRSTLAYER_TEMP == 1) {
-    Text(14, TEXT_FL_TEMP, 3, 1.0);
+
+  // Temperature text if it was set
+  if (TEXT_TEMP)
+  {
+    Text(16.5, TEXT_TEMP, TEMP_SIZE, 1.1, "right", CARD_LENGTH-TEXT_X+0.2);
   }
-  Text(4, TYPE, TYPE_SIZE, 1.0);
+
+  // Color text
+  if (COLOR)
+  {
+    Text(24, COLOR, COLOR_SIZE, 1.0);
+  }
+  if (COLOR2)
+  {
+    Text(24, COLOR2, BRAND_SIZE, 1.0, "right", CARD_LENGTH-TEXT_X+0.2);
+  }
+
+  // Brand and type
+  if (BRAND)
+  {
+    if (TYPE && TYPE2)  // Brand + 2 type lines
+    {
+      Text(16, BRAND, BRAND_SIZE, 1.0);
+      Text(10, TYPE, TYPE_SIZE, 1.0);
+      Text(4, TYPE2, TYPE_SIZE, 1.0);
+    }
+    else
+    {
+      if (TYPE)         // Brand + 1 type line
+      {
+        Text(10, BRAND, BRAND_SIZE, 1.0);
+        Text(4, TYPE, TYPE_SIZE, 1.0);
+      }
+      else if (TYPE2)   // Brand + 1 type line
+      {
+        Text(10, BRAND, BRAND_SIZE, 1.0);
+        Text(4, TYPE2, TYPE_SIZE, 1.0);
+      }
+      else              // Brand only
+      {
+        Text(4, BRAND, BRAND_SIZE, 1.0);
+      }
+    }
+  }
+  else
+  {
+    if (TYPE && TYPE2)  // 2 type lines
+    {
+      Text(10, TYPE, TYPE_SIZE, 1.0);
+      Text(4, TYPE2, TYPE_SIZE, 1.0);
+    }
+    else if (TYPE)      // 1 type line
+    {
+      Text(4, TYPE, TYPE_SIZE, 1.0);
+    }
+    else if (TYPE2)     // 1 type line
+    {
+      Text(4, TYPE2, TYPE_SIZE, 1.0);
+    }
+  }
 }
 
 module InfillInfo() {

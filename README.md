@@ -27,6 +27,25 @@ Another great method across systems is using VS Code. If you cloned this repo
 and open it within VS-Code make sure you have the Python extension installed.
 Then you can just edit the .csv right there, open the `gen_saples.py` script and immidiately run it with the play button in the upper right. Of course you still need some version of Python and OpenSCAD installed, Python should be found by VS Code if it is there.
 
+## Sample Fields
+
+The first line in samples.csv is the labels for the columns: "Brand", "Type", "Type2", "Color", "Color2", "Bed Temp", "Hotend Temp". All of the fields are optional and if you leave any of them empty then they will not be added to the sample chip.
+
+This example shows all of the fields:  
+<img src="docs/example_fields1_scad.png" width="350" hspace="15"/> <img src="docs/example_fields1.png" width="300"  hspace="15"/>
+
+1. Color
+2. Color2
+3. Brand
+4. Type
+5. Type2
+6. Hotend (nozzle) Temp
+7. Bed Temp
+
+Any field that is left blank will not be included. This example shows just Color, Brand, Type:  
+<img src="docs/example_fields2_scad.png" width="350" hspace="15">
+
+
 ## Using the stl-Models
 
 The output will be generated under the `stl`-Folder.
